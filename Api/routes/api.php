@@ -35,3 +35,5 @@ Route::delete('/asset/delete/{id}', [AssetController::class, 'destroy'])->name('
 Route::resource('itemAsset', ItemAssetController::class);
 Route::put('/itemAsset/update/{id}', [ItemAssetController::class, 'update'])->name('update');
 Route::delete('/itemAsset/delete/{id}', [ItemAssetController::class, 'destroy'])->name('destroy');
+
+Route::post('/register', App\Http\Controllers\Api\RegisterController::class)->name('register');
