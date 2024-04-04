@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AssetController;
 use App\Http\Controllers\API\ItemAssetController;
+use App\Http\Controllers\API\TaskController;
 use App\Http\Controllers\API\UnitController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +36,10 @@ Route::delete('/asset/delete/{id}', [AssetController::class, 'destroy'])->name('
 Route::resource('itemAsset', ItemAssetController::class);
 Route::put('/itemAsset/update/{id}', [ItemAssetController::class, 'update'])->name('update');
 Route::delete('/itemAsset/delete/{id}', [ItemAssetController::class, 'destroy'])->name('destroy');
+
+Route::resource('task', TaskController::class);
+Route::put('/task/update/{id}', [TaskController::class, 'update'])->name('update');
+Route::delete('/task/delete/{id}', [TaskController::class, 'destroy'])->name('destroy');
 
 Route::post('/register', App\Http\Controllers\Api\RegisterController::class)->name('register');
 
