@@ -14,4 +14,9 @@ class Part extends Model
         'detail',
 
     ];
+
+    public function partOrder()
+    {
+        return $this->hasMany(Part::class, 'part_id', 'id');
+    }
 }

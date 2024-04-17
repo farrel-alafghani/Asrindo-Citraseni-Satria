@@ -13,4 +13,10 @@ class PartOrder extends Model
 
 
     ];
+
+
+    public function part()
+    {
+        return $this->belongsTo(Part::class);
+    }
 }

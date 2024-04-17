@@ -3,9 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use PhpParser\Node\Stmt\Return_;
 
-class PartOrderResource extends JsonResource
+class MaintenanceResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,10 +14,6 @@ class PartOrderResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [
-            'id' => $this->id,
-            'maintenanceId' => $this->maintenanceId,
-            'partId' => $this->partId,
-        ];
+        return parent::toArray($request);
     }
 }
